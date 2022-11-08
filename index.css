@@ -1,0 +1,39 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+    width: 40%;
+}
+
+input{
+    width:200px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+button{
+    width: 30%;
+    margin-top: 20px;
+    border-radius: 30px;
+    background-color:rgb(241, 238, 37);
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+    text-align: center;
+    background-color: brown;
+    height: 300px;
+    width: 300px;
+    margin-top: 20px;
+    border-radius: 400px;;
+}
