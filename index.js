@@ -3,28 +3,32 @@ const pizzas = [
     id: 1,
     nombre: "Fugazzeta",
     precio: 550,
-    ingredientes: ["Queso","Cebolla", "Orégano"],
+    ingredientes: ["Muzzarella","Cebolla", "Orégano"],
+    
     },
 
 {
     id: 2,
-    nombre: "Especial",
+    nombre: "Napolitana",
     precio: 1000,
-    ingredientes: ["Queso","Cebolla", "Orégano", "Salchichas", "Palmitos", "Jamón Crudo", "Huevo", "Aceitunas", "Pimentón"],
+    ingredientes: ["Muzzarella","Tomate", "Orégano", "Albahaca", "Aceituna Negra", "Pimentón"],
+    
     },
 
 {
     id: 3,
     nombre: "Hawaiana",
     precio: 850,
-    ingredientes: ["Queso","Ananá", "Salsa Golf", "Orégano"],
+    ingredientes: ["Muzzarella","Ananá", "Salsa Golf", "Jamón Cocido"],
+    
     },
 
 {
     id:4,
     nombre: "Muzzarella",
     precio: 450,
-    ingredientes: ["Queso","Cebolla", "Orégano", "Aceitunas", "Pimentón"],
+    ingredientes: ["Muzzarella", "Albahaca", "Cebolla", "Orégano", "Aceitunas", "Pimentón"],
+    
     },
 
 {
@@ -32,6 +36,7 @@ const pizzas = [
     nombre: "Calabresa",
     precio: 950,
     ingredientes: ["Queso","Salame", "Orégano", "Aceitunas", "Pimentón"],
+    
     },
 
 {
@@ -39,6 +44,7 @@ const pizzas = [
     nombre: "Cuatro Quesos",
     precio: 800,
     ingredientes: ["Muzzarella","Roquefort", "Brie", "Fontina", "Orégano", "Aceitunas", "Pimentón"],
+    
     },
     
 ]
@@ -56,7 +62,7 @@ const idPizza = (value) => pizzas.find((pizza)=>pizza.id === value);
 
 //Fc que envía mensaje de error en caso de que no se haya ingresado ningún número.
 const ingreseId = ()=>{
-    contenedor.innerHTML =  `<h2>Ingrese un número del 1 al 6.</h2>`
+    contenedor.innerHTML =  `<div><h2>Ingrese un número del 1 al 6.</h2></div>`
 }
 
 //Fc que evalúa, dado un input numérico, si dicho n° 
@@ -64,9 +70,9 @@ const ingreseId = ()=>{
 //msj de error. Si encuentra, devuelve NOMBRE + PRECIO.
 const renderizarInfoPizza = (pizza) => {
     if (!pizza){
-        contenedor.innerHTML = `<h2>No pudimos encontrar ninguna pizza correspondiente a dicho número.</h2>`
+        contenedor.innerHTML = `<div><h2>No pudimos encontrar ninguna pizza correspondiente a dicho número.</h2></div>`
     } else {
-        contenedor.innerHTML = `<h2>${pizza.nombre}</h2><h3>Su valor es de: $${pizza.precio}</h3>`
+        contenedor.innerHTML = `<div><h2 class="titulo-pizza">${pizza.nombre}</h2><h3>Precio: $${pizza.precio}</h3></div>`
     }
 }
 //Defino Fc que recibe algo del evento (e)...
@@ -81,12 +87,17 @@ const renderizarInfoPizza = (pizza) => {
     }
     const infoPizza = idPizza(Number(pizzaId));
     renderizarInfoPizza(infoPizza);
-    form.reset();
+    form.reset();    
   }
-  //FUNCIÓN INICIALIZADORA: cuando suceda el evento SUBMIT, 
-  //se ejecuta mostrarInfoPizzza
+
+
+
+
+    //FUNCIÓN INICIALIZADORA: cuando suceda el evento SUBMIT, 
+  //se ejecuta mostrarInfoPizzza 
   const init =() => {
-    formulario.addEventListener("submit", mostrarInfoPizza)
+    formulario.addEventListener("submit", mostrarInfoPizza);
   }
 
 init()
+
