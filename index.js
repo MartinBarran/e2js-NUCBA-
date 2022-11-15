@@ -83,8 +83,6 @@ const renderizarInfoPizza = (pizza) => {
     renderizarInfoPizza(infoPizza);
     form.reset();
   }
-
-
   //FUNCIÓN INICIALIZADORA: cuando suceda el evento SUBMIT, 
   //se ejecuta mostrarInfoPizzza
   const init =() => {
