@@ -1,8 +1,27 @@
+@font-face {
+    font-family: "JosefinLight";
+    src: url(./fonts/josefin-sans/static/JosefinSans-Light.ttf);
+}
+@font-face {
+    font-family: "Josefin";
+    src: url(./fonts/josefin-sans/static/JosefinSans-Regular.ttf);
+}
+@font-face {
+    font-family: "JosefinBold";
+    src: url(./fonts/josefin-sans/static/JosefinSans-Bold.ttf);
+}
+*{
+    font-family: "Josefin";
+    box-sizing: border-box;
+    margin: 0px;
+}
+
 body{
     display: flex;
     flex-direction: column;
     justify-content:center ;
     align-items: center;
+    background-color: #100b00;
 }
 form {
     display: flex;
@@ -22,18 +41,32 @@ button{
     width: 30%;
     margin-top: 20px;
     border-radius: 30px;
-    background-color:rgb(241, 238, 37);
+    background-color: #ffcb47;
 }
-
+img{
+    height: 200px;
+    border-radius: 80px;
+    margin-top: 20px;
+}
 div {
     display: flex;
     flex-direction: column;
     justify-content:center ;
     align-items: center;
     text-align: center;
-    background-color: brown;
-    height: 300px;
-    width: 300px;
+    background-color: #f46036;
+    height: 400px;
+    width: 500px;
     margin-top: 20px;
-    border-radius: 400px;;
+    border-radius: 300px;;
+}
+p{
+    margin-top: 10px;
+    width: 80%;
+    line-height: 20px;
+}
+.titulo-pizza{
+    font-size: 2em;
+    line-height: 1.4em;
+    color: #f3d9dc;
 }
